@@ -27,7 +27,10 @@ router.get("/", (req, res, next) => {
 
 /* GET new message */
 router.get("/new", (req, res, next) => {
-    res.render("form", { title: "new message" });
+    res.render("form", {
+        title: "new message",
+        newMessage: () => res.redirect("/new")
+    });
 });
 
 /* POST new message */
