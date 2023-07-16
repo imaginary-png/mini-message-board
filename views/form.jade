@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1= title
+    form(role='form' method='POST' action='/new')
+        div
+            label(for='name') Name:
+            input(type='text', value='anon', name='name')
+        div
+            label(for='msg') Message:
+            input(type='text',name='msg')
+        button(type='submit', name='Post') Post
